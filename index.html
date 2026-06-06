@@ -203,11 +203,31 @@
                         <div>
                             <label class="block text-sm font-medium text-slate-300 mb-2">Phone Number</label>
                             <div class="flex">
-                                <select id="country-code" class="bg-slate-900 border border-slate-600 border-r-0 rounded-l-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none">
+                                <select id="country-code" class="bg-slate-900 border border-slate-600 border-r-0 rounded-l-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none w-28 text-sm">
+                                    <!-- Tier 1: 核心英语国家 -->
                                     <option value="+61">🇦🇺 +61</option>
                                     <option value="+1">🇺🇸 +1</option>
+                                    <option value="+1">🇨🇦 +1</option>
                                     <option value="+44">🇬🇧 +44</option>
                                     <option value="+64">🇳🇿 +64</option>
+                                    <!-- Tier 2: 高净值与欧洲主要经济体 --> 
+                                    <option value="+65">🇸🇬 +65</option>
+                                    <option value="+353">🇮🇪 +353</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+31">🇳🇱 +31</option>
+                                    <option value="+41">🇨🇭 +41</option>
+                                    <option value="+46">🇸🇪 +46</option>
+                                    <!-- Tier 3: 亚洲与中东主要经济体 -->
+                                    <option value="+971">🇦🇪 +971</option>
+                                    <option value="+81">🇯🇵 +81</option>
+                                    <option value="+852">🇭🇰 +852</option>
+                                    <option value="+86">🇨🇳 +86</option>
+                                    <option value="+886">🇭🇰 +886</option>
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+27">🇿🇦 +27</option>
+                                    <!-- 兜底选项 -->
+                                    <option value="+">🌍 Other (+)</option>
                                 </select>
                                 <input type="tel" id="lead-phone" required placeholder="412 345 678" class="w-full bg-slate-900 border border-slate-600 rounded-r-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none">
                             </div>
