@@ -22,7 +22,7 @@
     <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 fixed w-full z-50 top-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <!-- 🚀 完美修复的 Logo (纯CSS复刻版，加载0延迟，绝不撑破排版) -->
+                <!-- 🚀 完美修复的 Logo -->
                 <div class="flex-shrink-0 flex items-center gap-2.5 font-bold text-xl tracking-tight text-slate-900">
                     <div class="flex items-center justify-center w-8 h-8 bg-black text-white font-black text-sm rounded tracking-tighter shadow-sm">
                         AL
@@ -191,45 +191,60 @@
                 <p class="mt-4 text-lg text-slate-400">Submit your workflow details below. Our systems will automatically generate a custom architecture plan for you.</p>
             </div>
             
-            <form id="audit-form" class="space-y-6 bg-slate-800 p-8 md:p-10 rounded-2xl border border-slate-700 shadow-xl">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Full Name</label>
-                        <input type="text" id="lead-name" required class="w-full bg-slate-900 border border-slate-600 rounded-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Phone Number (For Demo SMS)</label>
-                        <input type="tel" id="lead-phone" required class="w-full bg-slate-900 border border-slate-600 rounded-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-2">Work Email</label>
-                    <input type="email" id="lead-email" required class="w-full bg-slate-900 border border-slate-600 rounded-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-2">Describe the workflow you want to automate</label>
-                    <textarea id="lead-workflow" rows="4" required placeholder="e.g., I need an AI to answer after-hours calls and log them to Airtable..." class="w-full bg-slate-900 border border-slate-600 rounded-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none"></textarea>
-                </div>
-
-                <div class="flex items-start bg-slate-900/50 p-5 rounded-xl border border-slate-700 mt-6">
-                    <div class="flex items-center h-5 mt-0.5">
-                        <input id="consent" type="checkbox" required class="focus:ring-blue-500 h-5 w-5 text-blue-600 border-slate-600 rounded bg-slate-800">
-                    </div>
-                    <div class="ml-3 text-sm">
-                        <label for="consent" class="font-bold text-slate-200">SMS & Communication Consent (Required)</label>
-                        <p class="text-slate-400 mt-2 text-xs leading-relaxed">
-                            By checking this box, you agree to receive SMS and Email communications from AuLogic Systems regarding your inquiry. You can opt-out at any time by replying STOP. <strong>Data will not be shared with third parties for marketing purposes.</strong>
-                        </p>
-                    </div>
-                </div>
-
-                <button type="submit" id="submit-btn" class="w-full mt-8 bg-blue-600 text-white font-bold py-4 rounded-xl text-lg hover:bg-blue-700 transition shadow-lg shadow-blue-900/20">
-                    Generate My Workflow Plan
-                </button>
+            <form id="audit-form" class="space-y-6 bg-slate-800 p-8 md:p-10 rounded-2xl border border-slate-700 shadow-xl relative">
                 
-                <div id="success-msg" class="hidden mt-6 bg-emerald-500/20 text-emerald-400 p-6 rounded-xl border border-emerald-500/30 text-center">
-                    <p class="font-bold text-xl mb-2">✅ Request Successfully Processed!</p>
-                    <p class="text-sm text-emerald-200">Our systems are now analyzing your workflow. Please check your email and phone for the next steps.</p>
+                <!-- 表单输入区域 (提交后将被隐藏) -->
+                <div id="form-fields">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Full Name</label>
+                            <input type="text" id="lead-name" required class="w-full bg-slate-900 border border-slate-600 rounded-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Phone Number</label>
+                            <div class="flex">
+                                <select id="country-code" class="bg-slate-900 border border-slate-600 border-r-0 rounded-l-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none">
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+64">🇳🇿 +64</option>
+                                </select>
+                                <input type="tel" id="lead-phone" required placeholder="412 345 678" class="w-full bg-slate-900 border border-slate-600 rounded-r-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Work Email</label>
+                        <input type="email" id="lead-email" required class="w-full bg-slate-900 border border-slate-600 rounded-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Describe the workflow you want to automate</label>
+                        <textarea id="lead-workflow" rows="4" required placeholder="e.g., I need an AI to answer after-hours calls and log them to Airtable..." class="w-full bg-slate-900 border border-slate-600 rounded-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none"></textarea>
+                    </div>
+
+                    <div class="flex items-start bg-slate-900/50 p-5 rounded-xl border border-slate-700 mt-6">
+                        <div class="flex items-center h-5 mt-0.5">
+                            <input id="consent" type="checkbox" required class="focus:ring-blue-500 h-5 w-5 text-blue-600 border-slate-600 rounded bg-slate-800">
+                        </div>
+                        <div class="ml-3 text-sm">
+                            <label for="consent" class="font-bold text-slate-200">SMS & Communication Consent (Required)</label>
+                            <p class="text-slate-400 mt-2 text-xs leading-relaxed">
+                                By checking this box, you agree to receive SMS and Email communications from AuLogic Systems regarding your inquiry. You can opt-out at any time by replying STOP. <strong>Data will not be shared with third parties for marketing purposes.</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full mt-8 bg-blue-600 text-white font-bold py-4 rounded-xl text-lg hover:bg-blue-700 transition shadow-lg shadow-blue-900/20">
+                        Generate My Workflow Plan
+                    </button>
+                </div>
+                
+                <!-- 提交后的成功反馈区域 -->
+                <div id="success-msg" class="hidden bg-slate-800/80 p-8 rounded-xl text-center">
+                    <div class="text-5xl mb-4">✅</div>
+                    <p class="font-extrabold text-2xl mb-3 text-white">Request Received!</p>
+                    <p class="text-base text-slate-400 mb-6">Our automated systems are processing your workflow architecture request. Please check your email for the next steps.</p>
+                    <a href="#" onclick="window.location.reload();" class="inline-block bg-slate-700 hover:bg-slate-600 text-white font-medium py-2 px-6 rounded-lg transition">Back to Home</a>
                 </div>
             </form>
         </div>
@@ -239,7 +254,7 @@
     <footer class="bg-black text-slate-400 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
-                <!-- 🚀 底部 Logo反转版 (黑底白字)，质感拉满 -->
+                <!-- 🚀 底部 Logo反转版 -->
                 <div class="flex items-center gap-2.5 font-bold text-xl tracking-tight text-white mb-4">
                     <div class="flex items-center justify-center w-7 h-7 bg-white text-black font-black text-xs rounded tracking-tighter shadow-sm">
                         AL
@@ -269,40 +284,40 @@
             e.preventDefault(); 
             
             const btn = document.getElementById('submit-btn');
+            const formFields = document.getElementById('form-fields');
             const successMsg = document.getElementById('success-msg');
             
-            btn.innerText = "Analyzing Requirements...";
+            btn.innerText = "Processing Data...";
             btn.disabled = true;
             btn.classList.add("opacity-50", "cursor-not-allowed");
 
+            // 🚀 电话号码处理：合并区号并清除空格
+            const rawPhone = document.getElementById('lead-phone').value;
+            const cleanPhone = rawPhone.replace(/\s+/g, '');
+            const finalPhone = document.getElementById('country-code').value + cleanPhone;
+
             const payload = {
                 name: document.getElementById('lead-name').value,
-                phone: document.getElementById('lead-phone').value,
+                phone: finalPhone,
                 email: document.getElementById('lead-email').value,
                 workflow: document.getElementById('lead-workflow').value,
                 source: "Website Front Page",
                 timestamp: new Date().toISOString()
             };
 
-            // ⚠️ 之后把这里换成你的 Make.com Webhook 链接即可
+            // 你的 Make.com Webhook 链接
             const WEBHOOK_URL = "https://hook.eu1.make.com/327vy9akuvumzdf1os2jo22wmvi4srbm"; 
 
-            // 目前演示用延迟反馈
-            /* 
-            setTimeout(() => {
-                btn.style.display = "none";
-                successMsg.classList.remove("hidden");
-            }, 1500);
-            */
-            
             fetch(WEBHOOK_URL, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
             })
             .then(response => {
-                btn.style.display = "none";
+                // 成功后：隐藏输入区域，显示成功提示，清空表单
+                formFields.style.display = "none";
                 successMsg.classList.remove("hidden");
+                document.getElementById('audit-form').reset();
             })
             .catch(error => {
                 console.error("Webhook Error:", error);
