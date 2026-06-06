@@ -285,15 +285,16 @@
             };
 
             // ⚠️ 之后把这里换成你的 Make.com Webhook 链接即可
-            const WEBHOOK_URL = "YOUR_MAKE_COM_WEBHOOK_URL_HERE"; 
+            const WEBHOOK_URL = "https://hook.eu1.make.com/327vy9akuvumzdf1os2jo22wmvi4srbm"; 
 
             // 目前演示用延迟反馈
+            /* 
             setTimeout(() => {
                 btn.style.display = "none";
                 successMsg.classList.remove("hidden");
             }, 1500);
-
-            /* 
+            */
+            
             fetch(WEBHOOK_URL, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -309,7 +310,7 @@
                 btn.disabled = false;
                 btn.classList.remove("opacity-50", "cursor-not-allowed");
             });
-            */
+            
         });
     </script>
 </body>
