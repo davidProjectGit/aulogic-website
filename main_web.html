@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuLogic Systems | Unified Workflow Infrastructure</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(135deg, #2563EB, #10B981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <!-- 🌐 极简导航栏 -->
+    <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- 🚀 完美修复的 Logo (纯CSS复刻版，加载0延迟，绝不撑破排版) -->
+                <div class="flex-shrink-0 flex items-center gap-2.5 font-bold text-xl tracking-tight text-slate-900">
+                    <div class="flex items-center justify-center w-8 h-8 bg-black text-white font-black text-sm rounded tracking-tighter shadow-sm">
+                        AL
+                    </div>
+                    AuLogic Systems
+                </div>
+                <!-- 导航菜单 -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#infrastructure" class="text-slate-600 hover:text-blue-600 font-medium transition">Infrastructure</a>
+                    <a href="#solutions" class="text-slate-600 hover:text-blue-600 font-medium transition">Solutions</a>
+                    <a href="#pricing" class="text-slate-600 hover:text-blue-600 font-medium transition">Pricing</a>
+                    <a href="https://portal.aulogicsystems.com" target="_blank" class="text-slate-500 font-medium hover:text-slate-900 transition flex items-center gap-1">
+                        Client Portal <span class="text-xs">↗</span>
+                    </a>
+                    <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-700 shadow-sm transition">Get Workflow Plan</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🚀 首屏 Hero Section -->
+    <section class="pt-32 pb-20 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                Run Your Business on <span class="gradient-text">Autopilot.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl text-lg md:text-xl text-slate-600 mx-auto mb-10">
+                We build the unified workflow infrastructure. You focus on growth. From AI voice receptionists to automated CRM pipelines, we replace manual drudgery with error-free systems.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-blue-600 text-white px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-blue-700 shadow-md transition">
+                    Generate My Workflow Plan
+                </a>
+                <a href="https://portal.aulogicsystems.com" target="_blank" class="bg-white text-slate-700 border border-slate-300 px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-slate-50 hover:text-slate-900 transition shadow-sm">
+                    Access Ops Center
+                </a>
+            </div>
+            <div class="mt-12 text-sm text-slate-500 font-medium">
+                Trusted by high-growth service businesses in Australia, US, and EU.
+            </div>
+        </div>
+    </section>
+
+    <!-- 🧠 The Philosophy (展示系统架构图) -->
+    <section id="infrastructure" class="py-24 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Stop buying disjointed software. Build an Infrastructure.</h2>
+                    <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                        Most businesses have a CRM, an email tool, and a calendar—but none of them talk to each other. Your team spends hours acting as the "human glue" between these apps.
+                    </p>
+                    <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+                        We don't sell isolated scripts. We build a unified <strong>Workflow Infrastructure</strong> that bridges the gaps, capturing every lead, automating every follow-up, and syncing every data point asynchronously.
+                    </p>
+                    <ul class="space-y-4 text-slate-700 font-medium">
+                        <li class="flex items-center"><span class="text-emerald-500 mr-3">✔</span> 24/7 Autonomous Operations</li>
+                        <li class="flex items-center"><span class="text-emerald-500 mr-3">✔</span> Zero Data Leakage</li>
+                        <li class="flex items-center"><span class="text-emerald-500 mr-3">✔</span> Custom Built for Your Standard Operating Procedures (SOPs)</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <div class="absolute -top-4 -left-4 w-20 h-20 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                    <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-emerald-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                    
+                    <div class="flex flex-col items-center space-y-4 relative z-10">
+                        <div class="w-full bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center font-semibold text-slate-800">
+                            📡 Inbound Signal <span class="block text-xs font-normal text-slate-500 mt-1">(Missed Call / Web Form / Lead)</span>
+                        </div>
+                        <div class="text-slate-400 font-bold">↓</div>
+                        <div class="w-full bg-blue-600 p-4 rounded-xl shadow-md text-center font-bold text-white">
+                            🤖 AI Processing Hub <span class="block text-xs font-normal text-blue-200 mt-1">(Qualifies, Answers, and Books)</span>
+                        </div>
+                        <div class="text-slate-400 font-bold">↓</div>
+                        <div class="w-full bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center font-semibold text-slate-800">
+                            📊 Client Data Hub <span class="block text-xs font-normal text-slate-500 mt-1">(CRM Auto-Updated & Synced)</span>
+                        </div>
+                        <div class="text-slate-400 font-bold">↓</div>
+                        <div class="w-full bg-emerald-500 p-4 rounded-xl shadow-md text-center font-bold text-white">
+                            ⚡ Action Engine <span class="block text-xs font-normal text-emerald-100 mt-1">(Triggers SMS Reminders & Follow-ups)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🛠️ 5大主力战舰 Solutions -->
+    <section id="solutions" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900">The 5 Core Systems</h2>
+                <p class="mt-4 text-lg text-slate-600">Enterprise-grade automation packaged for scaling businesses.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition">
+                    <div class="text-4xl mb-6">🎙️</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">AI Receptionist & Booking</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">A 24/7 AI Voice agent that sounds human. It answers inbound calls, pre-qualifies leads, answers FAQs, and books appointments directly into your calendar.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition">
+                    <div class="text-4xl mb-6">⚙️</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">CRM & Auto Follow-up</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Turn lost leads into revenue. We build custom CRM pipelines linked with automated text and email reminders to eliminate manual follow-ups and client no-shows.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition">
+                    <div class="text-4xl mb-6">🚀</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Lead Gen & Outreach</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Your automated growth machine. We extract highly targeted B2B data and deploy personalized cold outreach sequences to consistently fill your sales pipeline.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition lg:col-span-2">
+                    <div class="text-4xl mb-6">🔗</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Back Office Automation</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Eliminate manual data entry. We seamlessly sync your forms, invoices, databases, and operational spreadsheets across your existing tech stack using robust API connections.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition">
+                    <div class="text-4xl mb-6">📊</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Intelligence & Monitoring</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Executive insights on autopilot. Custom web monitoring and AI-summarized executive reports delivered directly to your inbox or Slack daily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💲 价格策略 Pricing -->
+    <section id="pricing" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Transparent Infrastructure Pricing</h2>
+            <p class="text-lg text-slate-600 mb-12 max-w-2xl mx-auto">No endless agency hourly rates. You pay a one-time setup for the build, and a flat retainer for us to host, maintain, and optimize your system.</p>
+            
+            <div class="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wide">Most Popular</div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-2">Automated Workflow Package</h3>
+                <p class="text-slate-500 mb-8">Ideal for deploying AI Voice Agents or CRM Auto Follow-ups.</p>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
+                    <div class="text-center">
+                        <span class="text-5xl font-extrabold text-slate-900">$299</span>
+                        <span class="block text-sm font-medium text-slate-500 mt-2 uppercase tracking-wide">One-time Setup</span>
+                    </div>
+                    <div class="text-3xl font-light text-slate-300 hidden md:block">+</div>
+                    <div class="text-center">
+                        <span class="text-5xl font-extrabold text-blue-600">$99</span>
+                        <span class="block text-sm font-medium text-slate-500 mt-2 uppercase tracking-wide">Monthly Retainer</span>
+                    </div>
+                </div>
+                
+                <div class="w-full h-px bg-slate-200 mb-8"></div>
+                
+                <ul class="text-left space-y-4 mb-10 max-w-md mx-auto text-slate-700">
+                    <li class="flex items-start"><span class="text-emerald-500 mr-3 text-lg leading-none">✔</span> <span>Custom Process Mapping & Strategy</span></li>
+                    <li class="flex items-start"><span class="text-emerald-500 mr-3 text-lg leading-none">✔</span> <span>Full API & System Integration</span></li>
+                    <li class="flex items-start"><span class="text-emerald-500 mr-3 text-lg leading-none">✔</span> <span>Secure Cloud Hosting & Uptime Monitoring</span></li>
+                    <li class="flex items-start"><span class="text-emerald-500 mr-3 text-lg leading-none">✔</span> <span>Monthly Optimization & Bug Fixes included</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📞 绝杀自动化表单区 -->
+    <section id="contact" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold">Ready to clear your bottlenecks?</h2>
+                <p class="mt-4 text-lg text-slate-400">Submit your workflow details below. Our systems will automatically generate a custom architecture plan for you.</p>
+            </div>
+            
+            <form id="audit-form" class="space-y-6 bg-slate-800 p-8 md:p-10 rounded-2xl border border-slate-700 shadow-xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Full Name</label>
+                        <input type="text" id="lead-name" required class="w-full bg-slate-900 border border-slate-600 rounded-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Phone Number (For Demo SMS)</label>
+                        <input type="tel" id="lead-phone" required class="w-full bg-slate-900 border border-slate-600 rounded-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Work Email</label>
+                    <input type="email" id="lead-email" required class="w-full bg-slate-900 border border-slate-600 rounded-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Describe the workflow you want to automate</label>
+                    <textarea id="lead-workflow" rows="4" required placeholder="e.g., I need an AI to answer after-hours calls and log them to Airtable..." class="w-full bg-slate-900 border border-slate-600 rounded-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none"></textarea>
+                </div>
+
+                <div class="flex items-start bg-slate-900/50 p-5 rounded-xl border border-slate-700 mt-6">
+                    <div class="flex items-center h-5 mt-0.5">
+                        <input id="consent" type="checkbox" required class="focus:ring-blue-500 h-5 w-5 text-blue-600 border-slate-600 rounded bg-slate-800">
+                    </div>
+                    <div class="ml-3 text-sm">
+                        <label for="consent" class="font-bold text-slate-200">SMS & Communication Consent (Required)</label>
+                        <p class="text-slate-400 mt-2 text-xs leading-relaxed">
+                            By checking this box, you agree to receive SMS and Email communications from AuLogic Systems regarding your inquiry. You can opt-out at any time by replying STOP. <strong>Data will not be shared with third parties for marketing purposes.</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <button type="submit" id="submit-btn" class="w-full mt-8 bg-blue-600 text-white font-bold py-4 rounded-xl text-lg hover:bg-blue-700 transition shadow-lg shadow-blue-900/20">
+                    Generate My Workflow Plan
+                </button>
+                
+                <div id="success-msg" class="hidden mt-6 bg-emerald-500/20 text-emerald-400 p-6 rounded-xl border border-emerald-500/30 text-center">
+                    <p class="font-bold text-xl mb-2">✅ Request Successfully Processed!</p>
+                    <p class="text-sm text-emerald-200">Our systems are now analyzing your workflow. Please check your email and phone for the next steps.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ⚖️ 页脚与隐私政策 -->
+    <footer class="bg-black text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+                <!-- 🚀 底部 Logo反转版 (黑底白字)，质感拉满 -->
+                <div class="flex items-center gap-2.5 font-bold text-xl tracking-tight text-white mb-4">
+                    <div class="flex items-center justify-center w-7 h-7 bg-white text-black font-black text-xs rounded tracking-tighter shadow-sm">
+                        AL
+                    </div>
+                    AuLogic Systems
+                </div>
+                <p class="text-sm mb-2">Sydney, Australia</p>
+                <p class="text-sm">support@aulogicsystems.com</p>
+            </div>
+            <div class="md:text-right">
+                <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Privacy Policy & SMS Terms</h4>
+                <p class="text-xs max-w-md md:ml-auto leading-relaxed text-slate-500 text-justify md:text-right">
+                    <strong>1. Consent:</strong> By submitting forms on this site, you consent to receive SMS messages from us regarding your service. <br>
+                    <strong>2. Opt-Out:</strong> Text "STOP" to cancel at any time. <br>
+                    <strong class="text-slate-300">3. No 3rd-Party Sharing:</strong> Originator opt-in data and consent will NOT be shared with any third parties, affiliates, or partners for marketing or promotional purposes.
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-sm text-center font-medium">
+            &copy; 2026 AuLogic Systems. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- 🚀 JS: 表单拦截与 Webhook 发送 -->
+    <script>
+        document.getElementById('audit-form').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            const btn = document.getElementById('submit-btn');
+            const successMsg = document.getElementById('success-msg');
+            
+            btn.innerText = "Analyzing Requirements...";
+            btn.disabled = true;
+            btn.classList.add("opacity-50", "cursor-not-allowed");
+
+            const payload = {
+                name: document.getElementById('lead-name').value,
+                phone: document.getElementById('lead-phone').value,
+                email: document.getElementById('lead-email').value,
+                workflow: document.getElementById('lead-workflow').value,
+                source: "Website Front Page",
+                timestamp: new Date().toISOString()
+            };
+
+            // ⚠️ 之后把这里换成你的 Make.com Webhook 链接即可
+            const WEBHOOK_URL = "YOUR_MAKE_COM_WEBHOOK_URL_HERE"; 
+
+            // 目前演示用延迟反馈
+            setTimeout(() => {
+                btn.style.display = "none";
+                successMsg.classList.remove("hidden");
+            }, 1500);
+
+            /* 
+            fetch(WEBHOOK_URL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                btn.style.display = "none";
+                successMsg.classList.remove("hidden");
+            })
+            .catch(error => {
+                console.error("Webhook Error:", error);
+                btn.innerText = "Connection Error. Please try again.";
+                btn.disabled = false;
+                btn.classList.remove("opacity-50", "cursor-not-allowed");
+            });
+            */
+        });
+    </script>
+</body>
+</html>
