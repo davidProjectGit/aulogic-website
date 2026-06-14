@@ -284,15 +284,16 @@
                         <textarea id="lead-workflow" rows="3" required placeholder="e.g., We spend 3 hours a day copying draft blogs into WordPress and LinkedIn..." class="w-full bg-slate-900 border border-slate-600 rounded-lg shadow-sm p-3 text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition outline-none"></textarea>
                     </div>
 
-                    <div class="flex items-start bg-slate-900/50 p-5 rounded-xl border border-slate-700 mt-6">
-                        <div class="flex items-center h-5 mt-0.5">
-                            <input id="consent" type="checkbox" required class="focus:ring-blue-500 h-5 w-5 text-blue-600 border-slate-600 rounded bg-slate-800">
+                    <div class="flex items-start bg-slate-800/40 p-5 rounded-xl border border-slate-700 mt-6 group">
+                        <div class="flex items-center h-5 mt-1">
+                            <input id="consent" type="checkbox" required class="focus:ring-emerald-500 h-5 w-5 text-emerald-600 border-slate-600 rounded bg-slate-900 cursor-pointer">
                         </div>
                         <div class="ml-3 text-sm">
-                            <label for="consent" class="font-bold text-slate-200">Legal Agreement (Required)</label>
-                            <p class="text-slate-400 mt-2 text-xs leading-relaxed">
-                                I agree to the <a href="/privacy-policy.html" class="text-blue-400 underline">Privacy Policy</a> and <a href="/sms-terms.html" class="text-blue-400 underline">SMS Terms</a>. 
-                                <span class="block mt-1 text-slate-500 italic">(Optional: If a phone number is provided above, you also consent to receive automated SMS/Email alerts regarding your workflow audit. Message frequency varies. Msg & data rates may apply. Text STOP to cancel.)</span>
+                            <label for="consent" class="font-bold text-slate-100 cursor-pointer">
+                                I agree to the <a href="/privacy-policy.html" class="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-400/30 transition-colors">Privacy Policy</a> and <a href="/sms-terms.html" class="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-400/30 transition-colors">SMS Terms</a>.
+                            </label>
+                            <p class="text-slate-500 mt-2 text-[11px] leading-relaxed italic opacity-80 group-hover:opacity-100 transition-opacity">
+                                (Optional: If you provided a phone number, you consent to receive automated system alerts and workflow audit updates. Msg frequency varies. Msg & data rates may apply. Text STOP to cancel at any time.)
                             </p>
                         </div>
                     </div>
@@ -313,34 +314,50 @@
         </div>
     </section>
 
-    <!-- ⚖️ 页脚与隐私政策 -->
-    <footer class="bg-black text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div>
-                <!-- 🚀 底部 Logo反转版 -->
-                <div class="flex items-center gap-2.5 font-bold text-xl tracking-tight text-white mb-4">
-                    <div class="flex items-center justify-center w-7 h-7 bg-white text-black font-black text-xs rounded tracking-tighter shadow-sm">
-                        AL
+   <!-- 找到 index.html 第 280 行附近的 <footer> 进行替换 -->
+    <footer class="bg-black text-slate-400 py-16 border-t border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- 1. Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2.5 font-bold text-xl tracking-tight text-white">
+                        <div class="flex items-center justify-center w-8 h-8 bg-white text-black font-black text-xs rounded shadow-sm">
+                            AL
+                        </div>
+                        AuLogic Systems
                     </div>
-                    AuLogic Systems
+                    <p class="text-xs leading-relaxed max-w-xs">
+                        Architecting modern, AI-enabled workflow infrastructures for global service businesses.
+                    </p>
+                    <p class="text-sm font-medium text-slate-300">support@aulogicsystems.com</p>
                 </div>
-                <p class="text-sm mb-2">Architecting Modern Workflows.</p>
-                <p class="text-sm">support@aulogicsystems.com</p>
+    
+                <!-- 2. Legal Links (新增：解决审核员必点项) -->
+                <div class="space-y-4">
+                    <h4 class="text-white text-xs font-bold uppercase tracking-widest">Legal & Compliance</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="/privacy-policy.html" class="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="/sms-terms.html" class="hover:text-blue-400 transition-colors">SMS Terms & Conditions</a></li>
+                        <li><a href="#contact" class="hover:text-blue-400 transition-colors">Compliance Audit</a></li>
+                    </ul>
+                </div>
+    
+                <!-- 3. Policy Summary (保持合规文案) -->
+                <div class="md:text-right space-y-4">
+                    <h4 class="text-white text-xs font-bold uppercase tracking-widest">A2P 10DLC Notice</h4>
+                    <p class="text-[10px] leading-relaxed text-slate-600 text-justify md:text-right italic">
+                        By submitting our forms, you consent to receive email and optional SMS communications. Text "STOP" to opt-out of SMS. <br><br>
+                        <span class="text-slate-400 not-italic"><strong>No 3rd-Party Sharing:</strong> Mobile information will NOT be shared with third parties or affiliates for marketing or promotional purposes.</span>
+                    </p>
+                </div>
             </div>
-            <div class="md:text-right">
-                <h4 class="text-white text-sm font-bold mb-4 uppercase tracking-wider">Privacy Policy & SMS Terms</h4>
-                <p class="text-xs max-w-md md:ml-auto leading-relaxed text-slate-500 text-justify md:text-right">
-                    <strong>1. Consent:</strong> By submitting forms on this site, you consent to receive SMS messages and emails from us regarding your service. <br>
-                    <strong>2. Opt-Out:</strong> Text "STOP" to cancel at any time. <br>
-                    <strong class="text-slate-300">3. No 3rd-Party Sharing:</strong> Originator opt-in data and consent will NOT be shared with any third parties, affiliates, or partners for marketing or promotional purposes.
-                </p>
+            
+            <div class="mt-16 pt-8 border-t border-slate-800/50 text-[10px] text-center font-medium text-slate-700 tracking-widest uppercase">
+                &copy; 2026 AuLogic Systems. All Rights Reserved.
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-sm text-center font-medium">
-            &copy; 2026 AuLogic Systems. All rights reserved.
         </div>
     </footer>
-
+    
     <!-- 🚀 JS: 表单拦截与 Webhook 发送 -->
     <script>
         document.getElementById('audit-form').addEventListener('submit', function(e) {
